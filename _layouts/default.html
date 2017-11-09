@@ -8,12 +8,26 @@
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <meta property="og:url"           content="https://ugokingsley.github.io" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="Your Website Title" />
+  <meta property="og:description"   content="Your description" />
+  <meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+    
+    <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
   </head>
 
   <body>
@@ -40,6 +54,10 @@
             -moz-box-shadow: -4px 2px 20px 0px rgba(0,0,0,0.49);box-shadow: -4px 2px 20px 0px rgba(0,0,0,0.49);">
           <div class="card-body">
             <p class="card-text"> {{ content }} </p>
+            <div class="fb-share-button" 
+    data-href="https://ugokingsley.github.io/" 
+    data-layout="button_count">
+  </div>
           </div>
       </div>
     </div>
