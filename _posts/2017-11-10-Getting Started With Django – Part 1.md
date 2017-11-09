@@ -24,3 +24,91 @@ Major Goal
 
 To fully understand the concepts used in this tutorial, we are going to build an hypothetical inventory application, that tracks the records of goods stored in a particular hypothetical organization.
 why the waste of time, let’s get started.
+
+
+
+Django – Environment Set Up
+
+Django development environment consists of installing and setting up Python a virtual environment and Django. You can move along with us by going to your terminal or command prompt and choose a desired location to save your files. Mine is saved in "djangoproj" folder on the desktop.
+
+download python here
+
+to set up a virtual environment we need to install pip
+--sudo easy_install pip
+
+       type admin password and then the enter key.
+
+Note: currently running on linux-ubuntu OS. To install pip on windows click here
+
+3. Install a virtual environment
+
+--sudo pip install virtualenv
+
+4. Create a new virtual environment :
+
+--virtualenv devcorp
+
+
+
+
+
+note: devcorp is the name of the virtual environment; you can give any name of your choice
+
+5.  Go the the devcorp directory
+
+--cd devcorp
+
+– to activate the virtual environment.
+
+--on OS X: source bin/activate
+
+--on windows: .\Scripts\activate
+
+– to be sure your virtual environment is activated make sure the directory name is in bracket, at the beginning of the last line
+
+
+note: make sure your virtual environment is active as you work
+
+6.  installing django
+
+still in your virtual environment, type
+
+--pip install django to download the latest version of django or
+
+--pip install django==1.8 to download a specific version, in this case 1.8
+
+note: you can give the project any name of your choice.
+
+7.  navigate into the inventory directory
+
+--cd inventory
+
+note: any where the manage.py file is, is the root directory. we will discuss more in our next tutorial
+
+
+
+8. To finalize this section of the tutorial, let’s create a django project called inventory
+
+--django-admin.py startproject inventory
+
+
+
+9. to see our project live on the server, type
+
+--python manage.py runserver
+
+in some cases you may have port conflicts since the server runs in port 8000.
+you can change the port by typing
+--python manage.py runserver 5000
+
+in our case we used port 5000
+
+
+9. in your web browser enter in the address bar
+
+  localhost:5000
+
+
+10 . press ctrl + c to exit the server
+
+we’ve reached a milestone, we will continue in part 2...
