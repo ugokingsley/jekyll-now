@@ -2,7 +2,6 @@
 layout: post
 title: Getting Started With Django – Part 3
 ---
-Getting Started with Django- Part 3
 
 Models: Designing an Initial Database Schema.
 
