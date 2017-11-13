@@ -23,7 +23,7 @@ in the templates folder, create an html file called base.html and insert the cod
 
 
 
-		
+		'{% load staticfiles %}'
 			<!DOCTYPE html>
 			<html lang="en">
 			<head>
