@@ -19,77 +19,17 @@ we will also create a folder  called static in the djangoproject folder, to hold
 in the templates folder, create an html file called base.html and insert the code snippets into it.
 	
 
-
-
-
-
-		'{% load staticfiles %}'
-			<!DOCTYPE html>
-			<html lang="en">
-			<head>
-			    <meta charset="UTF-8">
-			    <title>DjangoGirls Blog</title>
-			    <link rel="stylesheet" type="text/css" href='{% static "css/bootstrap.css" %}' />
-	    		<link rel="stylesheet" type="text/css" href='{% static "css/base.css" %}' />
-	    		<link href="{% static 'font-awesome/css/font-awesome.min.css' %}" 	type="text/css" rel="stylesheet">
-			</head>
-			<body>
-			{% include "navbar.html" %}
-				<div class="container">
-		    		{% block content %}
-
-		    		{% endblock %}
-			</div>
-		<script src='{% static "js/jquery.js" %}' ></script>
-		<script src='{% static "js/bootsstrap.js" %}' ></script>
-		</body>
-		</html>
 The base.html file represents the stucture of the website, we do not have to repeat ourselves declaring a doctype in every html file.
 
 We load our assets from the static folder by typing {% load staticfiles %} first on the templates, the our normal html file structure. We type {% include "navbar.html" %}, to include a navigation bar file called navbar.html, the code snnipets below:
 
-	<nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Django Girls</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;Home</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li ><a href="{% url 'post_list' %}"><i class="fa fa-users" aria-hidden="true"></i>&nbsp;List</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-
+	
 We only write our codes once, following a popular cliché called DRY (Don’t Repeat Yourself).
 All other contents of our website will be displayed within this code snippets
-		{% block content %}
-
-		    {% endblock %}
+		
 to demonstrate create another file called post_list.html, and past the following code snippets:
 
-	{% extends "base.html" %}
-	{% block content %}
-	 <div class="col-sm-6 col-sm-offset-3">
-	  {% for obj in list %}
-	                <div class="jumbotron">
-	                  <h3> <a href="/display/{{ obj.id }}">{{obj.title}}</a></h3>
-	                  <p>{{obj.content | safe  | linebreaks | truncatechars:50}}</p>
-	                    <p>{{obj.timestamp}}</p>
-	                    <p>{{obj.updated}}</p>
-	                </div>
-	 {% endfor %}
-	 </div>
-	{% endblock  %}
+	{
 to take on the website structure as defined in base.html, we type 	{% extends "base.html" %} above, first things first, on our new template. Remember from our post_list view function in views.py, we stated that we will render the view in post_list.html.
 
 
