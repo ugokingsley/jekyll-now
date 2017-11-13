@@ -17,27 +17,33 @@ we will also create a folder  called static in the djangoproject folder, to hold
 	)
 
 in the templates folder, create an html file called base.html and insert the code snippets into it.
-	{% load staticfiles %}
-	<!DOCTYPE html>
-	<html lang="en">
-	<head>
-	    <meta charset="UTF-8">
-	    <title>{% block head_title %}SeedStars Worldwide{% endblock head_title 	%}</title>
-	    <link rel="stylesheet" type="text/css" href='{% static "css/bootstrap.css" %}' />
-	    <link rel="stylesheet" type="text/css" href='{% static "css/base.css" %}' />
-	    <link href="{% static 'font-awesome/css/font-awesome.min.css' %}" 	type="text/css" rel="stylesheet">
-	</head>
-	<body>
-		{% include "navbar.html" %}
-			<div class="container">
-		    {% block content %}
+	
 
-		    {% endblock %}
-	</div>
-	<script src='{% static "js/jquery.js" %}' ></script>
-	<script src='{% static "js/bootsstrap.js" %}' ></script>
-	</body>
-	</html>
+
+
+
+
+		{% load staticfiles %}
+			<!DOCTYPE html>
+			<html lang="en">
+			<head>
+			    <meta charset="UTF-8">
+			    <title>DjangoGirls Blog</title>
+			    <link rel="stylesheet" type="text/css" href='{% static "css/bootstrap.css" %}' />
+	    		<link rel="stylesheet" type="text/css" href='{% static "css/base.css" %}' />
+	    		<link href="{% static 'font-awesome/css/font-awesome.min.css' %}" 	type="text/css" rel="stylesheet">
+			</head>
+			<body>
+			{% include "navbar.html" %}
+				<div class="container">
+		    		{% block content %}
+
+		    		{% endblock %}
+			</div>
+		<script src='{% static "js/jquery.js" %}' ></script>
+		<script src='{% static "js/bootsstrap.js" %}' ></script>
+		</body>
+		</html>
 The base.html file represents the stucture of the website, we do not have to repeat ourselves declaring a doctype in every html file.
 
 We load our assets from the static folder by typing {% load staticfiles %} first on the templates, the our normal html file structure. We type {% include "navbar.html" %}, to include a navigation bar file called navbar.html, the code snnipets below:
