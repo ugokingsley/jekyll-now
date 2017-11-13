@@ -22,7 +22,8 @@ before we proceed, the following tools should be available:
 
 Major Goal
 
-To fully understand the concepts used in this tutorial, we are going to build an hypothetical inventory application, that tracks the records of goods stored in a particular hypothetical organization.
+To fully understand the concepts used in this tutorial, we are going to build a blogging application where the administrator creates articles for users of the website to read, the admin can also edit and delete blog posts. The fundamentals of CRUD (Create Read Update and Delete) in Django is explained. 
+
 why the waste of time, let’s get started.
 
 
@@ -75,7 +76,7 @@ still in your virtual environment, type
 
 --pip install django to download the latest version of django or
 
---pip install django==1.8 to download a specific version, in this case 1.8
+--pip install django to download a specific version, in this case 1.ll
 
 note: you can give the project any name of your choice.
 
