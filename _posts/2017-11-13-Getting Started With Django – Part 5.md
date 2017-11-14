@@ -35,17 +35,12 @@ Open the views.py file and paste the following create function code snippets:
         		instance.save()
         		return HttpResponseRedirect(reverse('post_list'))
     		return render(request,"create.html",context)
+		
+		
+		
 we first of all import all the necessary modules and function, then we check if the user of the website is a staff or a superuser(administrator), if not the view should return a 404 error page, next we create a variable called form that retrieves submitted posts. The PostForm() is created in a file called forms.py  (not added by django by default) in the djangoapp directory the code snippets in forms.py is pasted below:
 
 	
-
-
-
-
-
-
-
-
 	from django import forms
 	from .models import Post
 
@@ -61,6 +56,9 @@ we first of all import all the necessary modules and function, then we check if 
     		def clean_title(self):
         		title=self.cleaned_data.get('title')
         		return title
+			
+			
+			
 we first import th forms module from django, thereafter wee import the Post model from models.py. We create a class called PostForm, with meta class of model Post and fields title and content. The timestamp and updated fields are filled automatically by django; we then create a method for validating user inputs.
 
 From the create view, we rendered the create.html template, see github repo for code snippets, it’s similar to the other templates we created earlier
@@ -74,6 +72,8 @@ To create the post_display view, open the views.py file and paste the following 
         		'display': display,
     		}
     		return render(request, 'post_display.html', context)
+		
+		
 we create a variable called display that contains the value of an object retrieved from the database, a dictionary dictionary variable called context is created to hold the display data, that will be rendered in post_display.html template. This template will be rendered when the title of the blog post is clicked, it displays every thing about the blog post in detail is the homepage limits some content.
 
 
@@ -106,6 +106,8 @@ The post_update view retrieves a particular post from the database and renders i
       		"form":form,
    		}
     		return render(request, "create.html", context)
+		
+		
 we check again if the user requesting an update is a staff or an administrator, else we return a 404 page.
 We request the PostForm(); check if the new user input is valid and then save, as said earlier we render the create.html.
 
@@ -120,6 +122,7 @@ The post_delete view is a view for deleting blog posts. Open the views.py file a
    		instance.delete()
    		messages.success(request, "Successfully deleted")
    		return redirect("/")
+		
       
 once we get and delete the object we want to, we display the “ successfully deleted ”  message and we are redirected to the homepage. 
 
