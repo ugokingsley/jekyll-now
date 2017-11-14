@@ -23,7 +23,7 @@ Major Goal
 
 To fully understand the concepts used in this tutorial, we are going to build a blogging application where the administrator creates articles for users of the website to read, the admin can also edit and delete blog posts. The fundamentals of CRUD (Create Read Update and Delete) in Django is explained. 
 
-why the waste of time, let’s get started.
+To follow through, we recommend you go to this repo: https://github.com/ugokingsley/djangogirlsPH  to clone or download the code snippets. Why the waste of time, let’s get started.
 
 
 
