@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109661090-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-109661090-1');
+    </script>
+
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
     {% include meta.html %}
@@ -9,9 +19,9 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <meta property="og:url"           content="https://ugokingsley.github.io" />
-  <meta property="og:type"          content="website" />
-  <meta property="og:title"         content="Your Website Title" />
-  <meta property="og:description"   content="Your description" />
+  <meta property="og:type"          content="{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}" />
+  <meta property="og:title"         content="{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}" />
+  <meta property="og:description"   content="{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}" />
   <meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
