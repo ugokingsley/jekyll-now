@@ -2,7 +2,6 @@
 layout: post
 title: Getting Started With Django – Part 2
 ---
-
 Creating Administrator Account
 In this tutorial we are going to create our first django application, before that let’s create the admin superuser
 1. apply migrations
