@@ -4,7 +4,6 @@ title: Getting Started With Django – Part 3
 ---
 
 Models: Designing an Initial Database Schema.
-
 We are to create a database table for posts. We will chose the database engine that configured our database settings in the previous part. If you are used to dealing with the database directly through SQL queries, then you may find Django's approach to database access a bit different. Loosely speaking,
 Django abstracts access to database tables through Python classes. To store, manipulate and retrieve objects from the database, the developer uses a Python-based API. In order to do this, SQL knowledge is useful but not required. This technique is best explained by example, so let’s get started.
 
