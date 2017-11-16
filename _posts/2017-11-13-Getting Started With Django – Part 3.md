@@ -3,7 +3,6 @@ layout: post
 title: Getting Started With Django – Part 3
 ---
 
-
 Models: Designing an Initial Database Schema.
 
 We are to create a database table for posts. We will chose the database engine that configured our database settings in the previous part. If you are used to dealing with the database directly through SQL queries, then you may find Django's approach to database access a bit different. Loosely speaking,
