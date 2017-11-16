@@ -4,7 +4,6 @@ layout: post
 title: Getting Started With Django – Part 5
 ---
 
-
 Django Forms
 
 Creating, validating and processing forms is an all too common task. Web applications receive input and collect data from users by means of web forms. So naturally Django comes with its own library to handle these tasks. In Django 0.96, the library is called newforms but it will be renamed to forms in Django 1.0 (once it has been released). In this section of the tutorial we’ll create a form to enable us enter post without using the admin interface, before that let us create the views for creating, displaying post detail, updating and deleting forms.
