@@ -7,11 +7,7 @@ we'd better separate Django views from HTML code generation before continuing wi
 to hard-code the path into settings.py , you can use the following little snippet that will also work:
 
 	'DIRS': [os.path.join(BASE_DIR, "templates")],
-
-
-we will also create a folder  called static in the djangoproject folder, to hold our website assets ( javascript, css and images) create the our_static folder inside static folder then extra three folders inside our_static folder named css, js and img to hold our css, javascript and image assets repectively. Add the snippets below in settings.py, below STATIC_URL = '/static/'  to inform django of the static directory:
-
-	
+we will also create a folder  called static in the djangoproject folder, to hold our website assets ( javascript, css and images) create the our_static folder inside static folder then extra three folders inside our_static folder named css, js and img to hold our css, javascript and image assets repectively. Add the snippets below in settings.py, below STATIC_URL = '/static/'  to inform django of the static directory:	
 in the templates folder, create an html file called base.html and insert the code snippets into it.
 
 		{% load staticfiles %}
