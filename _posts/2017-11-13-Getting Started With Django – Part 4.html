@@ -31,14 +31,7 @@ We display all post by using a foorloop.
 
 Next we will create our urls to display the posts on the browser. As you may recall from the previous chapter, a file named urls.py was created when we started our project. This file contains valid URLs for our application, and maps each URL to a view that is a Python function. Open urls.py in the djangoproject directory and enter the following code snippets:
 
-	from django.conf.urls import url
-	from django.contrib import admin
-	from djangoapp.views import post_list
-
-	urlpatterns = [
-	    url(r'^admin/', admin.site.urls),
-	    url(r'^$', post_list, name='post_list'),
-	]
+	
 
 firstly, we import the post_list view from the views.py and add url(r'^$', post_list, name='post_list'). The rest is added by default during installation of django. 
 
