@@ -10,28 +10,7 @@ to hard-code the path into settings.py , you can use the following little snippe
 we will also create a folder  called static in the djangoproject folder, to hold our website assets ( javascript, css and images) create the our_static folder inside static folder then extra three folders inside our_static folder named css, js and img to hold our css, javascript and image assets repectively. Add the snippets below in settings.py, below STATIC_URL = '/static/'  to inform django of the static directory:	
 in the templates folder, create an html file called base.html and insert the code snippets into it.
 
-		{% load staticfiles %}
-			<!DOCTYPE html>
-			<html lang="en">
-			<head>
-			    <meta charset="UTF-8">
-			    <title>DjangoGirls Blog</title>
-			    <link rel="stylesheet" type="text/css" href='{% static "css/bootstrap.css" %}' />
-	    		<link rel="stylesheet" type="text/css" href='{% static "css/base.css" %}' />
-	    		<link href="{% static 'font-awesome/css/font-awesome.min.css' %}" 	type="text/css" rel="stylesheet">
-			</head>
-			<body>
-			{% include "navbar.html" %}
-				<div class="container">
-		    		{% block content %}
-
-		    		{% endblock %}
-			</div>
-		<script src='{% static "js/jquery.js" %}' ></script>
-		<script src='{% static "js/bootsstrap.js" %}' ></script>
-		</body>
-		</html>
-
+		
 The base.html file represents the stucture of the website, we do not have to repeat ourselves declaring a doctype in every html file.
 
 We load our assets from the static folder by typing {% load staticfiles %} first on the templates, the our normal html file structure. We type {% include "navbar.html" %}, to include a navigation bar file called navbar.html, the code snnipets below:
@@ -62,24 +41,10 @@ We load our assets from the static folder by typing {% load staticfiles %} first
 We only write our codes once, following a popular cliché called DRY (Don’t Repeat Yourself).
 All other contents of our website will be displayed within this code snippets
 
-		{% block content %}
-
-		    {% endblock %}
+		
 	
 to demonstrate create another file called post_list.html, and past the following code snippets:
-	{% extends "base.html" %}
-	{% block content %}
-	 <div class="col-sm-6 col-sm-offset-3">
-	  {% for obj in list %}
-	                <div class="jumbotron">
-	                  <h3> <a href="/display/{{ obj.id }}">{{obj.title}}</a></h3>
-	                  <p>{{obj.content | safe  | linebreaks | truncatechars:50}}</p>
-	                    <p>{{obj.timestamp}}</p>
-	                    <p>{{obj.updated}}</p>
-	                </div>
-	 {% endfor %}
-	 </div>
-	{% endblock  %}
+	
 to take on the website structure as defined in base.html, we type 	{% extends "base.html" %} above, first things first, on our new template. Remember from our post_list view function in views.py, we stated that we will render the view in post_list.html.
 
 
