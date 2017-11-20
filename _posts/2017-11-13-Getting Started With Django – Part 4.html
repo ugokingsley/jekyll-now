@@ -11,10 +11,7 @@ to hard-code the path into settings.py , you can use the following little snippe
 
 we will also create a folder  called static in the djangoproject folder, to hold our website assets ( javascript, css and images) create the our_static folder inside static folder then extra three folders inside our_static folder named css, js and img to hold our css, javascript and image assets repectively. Add the snippets below in settings.py, below STATIC_URL = '/static/'  to inform django of the static directory:
 
-	STATICFILES_DIRS=(
-		os.path.join(BASE_DIR, "static", "our_static"),
-	)
-
+	
 in the templates folder, create an html file called base.html and insert the code snippets into it.
 
 		{% load staticfiles %}
