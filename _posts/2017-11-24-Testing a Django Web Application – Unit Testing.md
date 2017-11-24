@@ -3,6 +3,8 @@ layout: post
 title: Testing a Django Web Application – Unit Testing
 ---
 Testing a Django Web Application – Unit Testing
+
+Testing a Django Web Application – Unit Testing
 This tutorial shows how to write and carry out unit testing of your website using Django's test framework. As we begin to build websites and other applications, and as interactions with such websites or application components become complex and not easy to investigate,  a small change in one component of the website or application can impact other areas and components, so more changes will be required to ensure everything keeps working and errors are not introduced as more changes are made.  One way to mitigate these problems is to write automated tests, which can easily and reliably be run every time you make a change. For example, manually navigating through pages to verify that it’s not rendering errors when a view  or model in your django application is altered could be a hell of a task and very frustrating; also it’s time consuming,  If we were to continue as we are, eventually we'd be spending most of our time testing, and very little time improving our code
 
 Automated tests can really help with this problem! The obvious benefits are that they can be run much faster than manual tests, can test to a much lower level of detail, and test exactly the same functionality every time (human testers are nowhere near as reliable!) Because they are fast, automated tests can be executed more regularly, and if a test fails, they point to exactly where code is not performing as expected.
@@ -10,11 +12,13 @@ Automated tests can really help with this problem! The obvious benefits are that
 Django provides a test framework with a small hierarchy of classes that build on the Python standard unittest library. Despite the name, this test framework is suitable for both unit and integration tests. The Django framework adds API methods and tools to help test web and Django-specific behaviour. These allow you to simulate requests, insert test data, and inspect your application's output
 for this tutorial, we are going to write a simple unit test for the application  we built in the getting started with django series. We are going to create a unit test for our models and views. Create a file structure as shown below in the djangoapp directory. The __init__.py should be an empty file (this tells Python that the directory is a package). Delete the /djangoapp/tests.py file that came pre-installed.
 
-	djangoapp/
-  		/tests/
-    			__init__.py
-    			test_models.py
-   			test_views.py
+	Djangoapp/
+		/tests/
+			__init__.py
+			test_models.py
+			test_views.py
+			
+
 
 for the models unit test, let’s briefly look at the underlying model we testing:
 
@@ -48,18 +52,20 @@ setUp() is called before every test function to set up any objects that may be 
 test_post() is called to verify if the dummy post we created exists in the database. We have a number of test methods, which use Assert functions to test whether conditions are true, false or equal (AssertTrue, AssertFalse, AssertEqual). If the condition does not evaluate as expected then the test will fail and report the error to your console. In our case we use the  AssertEquals methods to check if the dummy post created is what is in the database.
 
 For the views unit test we want to see if the post listing and the single post display will be executed correctly. let’s briefly look at the underlying views we testing:
-		def post_list(request):
-    			list=Post.objects.all().order_by("-timestamp")
-    			context={
-        			"list": list,
-    			}
-    			return render(request, "post_list.html", context)
-		def post_display(request, post_id):
-    			display = get_object_or_404(Post, id=post_id)
-    			context = {
-        			'display': display,
-    			}
-    			return render(request, 'post_display.html', context)
+		
+	def post_list(request):
+    		list=Post.objects.all().order_by("-timestamp")
+    		context={
+        		"list": list,
+    		}
+    		return render(request, "post_list.html", context)
+
+	def post_display(request, post_id):
+    		display = get_object_or_404(Post, id=post_id)
+    		context = {
+        		'display': display,
+    		}
+    		return render(request, 'post_display.html', context)
 
 add the following code snippets in the test_views.py file:
 
