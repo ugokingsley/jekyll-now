@@ -7,16 +7,15 @@ Django’s primary goal is to ease the creation of complex, database-driven webs
 
 
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- webad1 -->
 <ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
+     style="display:block"
      data-ad-client="ca-pub-4394717151036319"
-     data-ad-slot="9835636423"></ins>
+     data-ad-slot="1371193517"
+     data-ad-format="auto"></ins>
 <script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
+(adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-
 
 “Django started as an internal project at the Lawrence Journal-World newspaper in 2003. The web development team there often had to implement new features or even entire applications within hours. Therefore, Django was created to meet the fast deadlines of journalism websites, whilst at the same time keeping the development process clean and maintainable.”
 
