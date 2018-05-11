@@ -109,16 +109,7 @@ Database is set in the ‘Database’ dictionary. The example above is for SQLit
 
 	MongoDB (django_mongodb_engine)
 
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- webad1 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-4394717151036319"
-     data-ad-slot="1371193517"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 
 2. django app(djangoapp) directory
 
