@@ -4,16 +4,7 @@ title: Testing a Django Web Application – Unit Testing
 ---
 This tutorial shows how to write and carry out unit testing of your website using Django's test framework. As we begin to build websites and other applications, and as interactions with such websites or application components become complex and not easy to investigate,  a small change in one component of the website or application can impact other areas and components, so more changes will be required to ensure everything keeps working and errors are not introduced as more changes are made.  One way to mitigate these problems is to write automated tests, which can easily and reliably be run every time you make a change. For example, manually navigating through pages to verify that it’s not rendering errors when a view  or model in your django application is altered could be a hell of a task and very frustrating; also it’s time consuming,  If we were to continue as we are, eventually we'd be spending most of our time testing, and very little time improving our code
 
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- github1 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-4394717151036319"
-     data-ad-slot="3928666607"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 
 Automated tests can really help with this problem! The obvious benefits are that they can be run much faster than manual tests, can test to a much lower level of detail, and test exactly the same functionality every time (human testers are nowhere near as reliable!) Because they are fast, automated tests can be executed more regularly, and if a test fails, they point to exactly where code is not performing as expected.
 
